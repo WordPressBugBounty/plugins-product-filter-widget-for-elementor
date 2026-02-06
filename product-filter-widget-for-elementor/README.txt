@@ -1,12 +1,14 @@
-Product Filter Widget for Elementor
+=== Product Filter Widget for Elementor ===
 Contributors: brthumar1959
-Tags: woocommerce product filter, product filter, product filter widget, woocommerce filter, elementor filter widgte
-Requires at least: 4.6
-Tested up to: 6.5.2
-Stable tag: 1.0.4
-Requires PHP: 5.2.4
+Tags: woocommerce product filter, product filter, product filter widget, woocommerce filter, elementor filter widget
+Requires at least: 5.0
+Tested up to: 6.9
+Stable tag: 1.0.6
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Product Filter Widget for Elementor Lets you give functionality to filter your products.
 
 == Description ==
 **Product Filter Widget for Elementor** Lets you give functionality to **filter your products**.
@@ -38,13 +40,20 @@ You can now filter your products using this plugin easily by attributes, categor
 2. Activate the plugin through the 'Plugins' screen in WordPress
 
 == Changelog ==
-= 1.0.2 (03-21-22) =
-# Security Fixes
 
-== Changelog ==
-= 1.0.3 (05-29-23) =
-# Security Fixes
+= 1.0.6 (01-16-26) =
+* Fix: Deprecation warning "Creation of dynamic property" fixed.
 
-== Changelog ==
+= 1.0.5 (01-10-26) =
+* Update: WordPress 6.9 compatibility.
+* Update: Minimum Elementor & PHP version requirements.
+* Fix: Deprecated code replacements.
+
 = 1.0.4 (04-30-24) =
-# compatibility update
+* compatibility update
+
+= 1.0.3 (05-29-23) =
+* Security Fixes
+
+= 1.0.2 (03-21-22) =
+* Security Fixes

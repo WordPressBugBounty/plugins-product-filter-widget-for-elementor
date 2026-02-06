@@ -2,7 +2,7 @@
 
 class Eszpf_Ajax_Handler {
     private $eszwcq;
-    private $eszwcf;
+    private $eszlwcf;
 
     public function __construct() {
         $this->eszwcq = new \Eszpf_Product_Filter_Query_Controller();

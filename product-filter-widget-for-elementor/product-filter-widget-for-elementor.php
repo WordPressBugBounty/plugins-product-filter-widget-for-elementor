@@ -4,7 +4,7 @@ Plugin Name: Product Filter Widget for Elementor
 Description: WooCommerce Product Filter plugin Provide you product list with many filter option such as category, tag attributes prices and much more.
 Author: QualArch
 Author URI: https://www.qualarch.com/
-Version: 1.0.4
+Version: 1.0.6
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: product-filter-widget-for-elementor
@@ -21,7 +21,7 @@ final class Esz_Product_Filter_Widget_For_Elementor {
      *
      * @var string The plugin version.
      */
-    const VERSION = '1.0.4';
+    const VERSION = '1.0.6';
     /**
      * Minimum Elementor Version
      *
@@ -37,7 +37,7 @@ final class Esz_Product_Filter_Widget_For_Elementor {
      *
      * @var string Minimum PHP version required to run the plugin.
      */
-    const MINIMUM_PHP_VERSION = '5.4';
+    const MINIMUM_PHP_VERSION = '7.4';
     /**
      * Instance
      *
@@ -99,7 +99,7 @@ final class Esz_Product_Filter_Widget_For_Elementor {
         add_action('elementor/frontend/after_register_scripts', [$this, 'widget_scripts']);
         if($this->is_woocommerce_activated()) {
             // Register Widget
-            add_action('elementor/widgets/widgets_registered', [$this, 'register_widgets']);
+            add_action('elementor/widgets/register', [$this, 'register_widgets']);
             // Register Admin Script
             add_action('admin_enqueue_scripts', [$this, 'admin_scripts']);
             $eszlwcf_product_filter_query_controller = new Eszpf_Product_Filter_Query_Controller();
@@ -120,8 +120,8 @@ final class Esz_Product_Filter_Widget_For_Elementor {
      *
      * @access public
      */
-    public function register_widgets() {
-        \Elementor\Plugin::instance()->widgets_manager->register(new \Elementor\Eszpf_Product_Filter());
+    public function register_widgets($widgets_manager) {
+        $widgets_manager->register(new \QualArch\ProductFilter\Eszpf_Product_Filter());
     }
 
     public function widget_styles() {

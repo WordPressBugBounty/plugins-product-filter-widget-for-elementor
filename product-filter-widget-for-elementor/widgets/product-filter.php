@@ -1,9 +1,17 @@
 <?php
 
-namespace Elementor;
+namespace QualArch\ProductFilter;
 
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Group_Control_Image_Size;
 use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Background;
+use Elementor\Group_Control_Box_Shadow;
+use Elementor\Group_Control_Text_Shadow;
+use Elementor\Group_Control_Typography;
 
 class Eszpf_Product_Filter extends Widget_Base {
     protected $eszlwcf;
@@ -68,7 +76,7 @@ class Eszpf_Product_Filter extends Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
         $this->register_controls_content();
         $this->register_controls_style();
     }
